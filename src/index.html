@@ -11,14 +11,14 @@
   >
     <section class="w-20">
       <img
-        class="absolute top-6 left-6 h-14 w-14 rounded-full"
+        class="absolute top-6 left-6 h-14 w-14 rounded-full hover:scale-110 duration-200 hover:shadow-lg"
         src="./assets/my_image.jpg"
         alt=""
       />
       <div class="w-0.5 h-96"></div>
     </section>
     <main
-      class="flex flex-col items-center h-56 max-w-lg bg-gradient-to-t from-emerald-950 to-gray-950 rounded-xl gap-8 p-8"
+      class="flex flex-col items-center justify-between h-56 max-w-lg bg-gradient-to-t from-emerald-950 to-gray-950 rounded-xl p-8"
     >
       <div
         id="container"
@@ -27,18 +27,36 @@
         <p id="passwordOutput">Welcome to KeyVault........!</p>
       </div>
       <div>
-        <form id="passwordForm">
-          <label>
-            <input type="radio" name="passwordLength" value="8" />
+        <form class="flex justify-between w-80" id="passwordForm">
+          <label class="flex items-center">
+            <input
+              class="h-4 w-4"
+              type="radio"
+              name="passwordLength"
+              value="8"
+            />
             Short (8 characters)
           </label>
-          <label>
-            <input type="radio" name="passwordLength" value="16" />
+          <label class="flex items-center">
+            <input
+              class="h-4 w-4"
+              type="radio"
+              name="passwordLength"
+              value="16"
+            />
             Long (16 characters)
           </label>
         </form>
       </div>
-      <div><button type="button" id="generateBtn">Generate</button></div>
+      <div>
+        <button
+          class="h-10 w-36 bg-gradient-to-b rounded-lg from-emerald-950 to-gray-950 hover:scale-110 duration-200 hover:shadow-xl"
+          type="button"
+          id="generateBtn"
+        >
+          Generate
+        </button>
+      </div>
       <footer class="bottom-5 fixed">
         <p>
           KeyVault - Secure your world. Crafted by Sahil. © 2024 All rights
@@ -47,18 +65,18 @@
       </footer>
     </main>
     <section class="w-20">
-      <div class="absolute bottom-0 right-6 flex flex-col items-center">
+      <div class="absolute bottom-0 right-6 flex flex-col items-center gap-3">
         <img
-          class="h-14 w-14 rounded-full"
-          src="./assets/my_image.jpg"
+          class="h-10 w-10 rounded-full border-2 border-white bg-white hover:scale-110 duration-200"
+          src="./assets/github_logo.png"
           alt=""
         /><img
-          class="h-14 w-14 rounded-full"
-          src="./assets/my_image.jpg"
+          class="h-10 w-10 rounded-full border-2 border-white bg-white hover:scale-110 duration-200"
+          src="./assets/linkedin_logo_png.png"
           alt=""
         /><img
-          class="h-14 w-14 rounded-full"
-          src="./assets/my_image.jpg"
+          class="h-10 w-10 rounded-full border-2 border-white bg-white hover:scale-110 duration-200"
+          src="./assets/email.png"
           alt=""
         />
         <div class="w-0.5 h-32 bg-white"></div>

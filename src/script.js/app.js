@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const length = parseInt(selectedOption.value);
     const password = generatePassword(length);
-    outputElement.textContent = `Generated Password: ${password}`;
+    outputElement.textContent = `Generated Password : ${password}`;
   });
 
   function generatePassword(length) {

@@ -3,7 +3,7 @@ import unclicked from "../assets/unclicked_icon.png";
 import clicked from "../assets/clicked_icon.png";
 import deleteIcon from "../assets/delete_icon.png";
 
-const List_items = ({text}) => {
+const List_items = ({text, id, isCompleted, deleteTodo}) => {
   return (
     <div className="flex w-2xl justify-between items-center p-2">
       <div className="flex gap-2">
@@ -16,6 +16,7 @@ const List_items = ({text}) => {
       </div>
       <div>
         <img
+        onClick={()=>{deleteTodo(id)}}
           className="h-7 w-7 cursor-pointer duration-200 active:scale-125 hover:scale-110"
           src={deleteIcon}
           alt="deleteIcon_icon"

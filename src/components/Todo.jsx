@@ -19,7 +19,11 @@ const Todo = () => {
     setTodoList((prev) => [...prev, newTodo]);
     inputRef.current.value = "";
   };
-
+  const deleteTodo = (id) => {
+    setTodoList((prvTodos) => {
+      return prvTodos.filter((todo) => todo.id !== id);
+    });
+  };
   return (
     <div className="relative h-screen w-full flex flex-col items-center justify-center gap-5">
       <div className="relative z-10 h-1/12 w-11/12 sm:w-1/2 flex flex-col items-center justify-center bg-white rounded-lg shadow-lg p-10">
@@ -41,7 +45,15 @@ const Todo = () => {
       <div className="relative z-10 h-3/5 w-11/12 sm:w-1/2 flex flex-col items-center bg-white rounded-lg shadow-lg p-5 gap-10">
         <div>
           {todoList.map((item, index) => {
-            return <List_items key={index} text={item.text} />;
+            return (
+              <List_items
+                key={index}
+                text={item.text}
+                id={item.id}
+                isCompleted={item.isCompleted}
+                deleteTodo={deleteTodo}
+              />
+            );
           })}
         </div>
       </div>

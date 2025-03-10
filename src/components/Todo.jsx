@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import List_items from "./List_items";
 
 const Todo = () => {
@@ -24,6 +24,17 @@ const Todo = () => {
       return prvTodos.filter((todo) => todo.id !== id);
     });
   };
+  const toggle = (id) => {
+    setTodoList((prvTodos) => {
+      return prvTodos.map((todo) => {
+        if (todo.id === id) {
+          return { ...todo, isCompleted: !todo.isCompleted };
+        }
+        return todo;
+      });
+    });
+  };
+  useEffect(() => {}, [todoList]);
   return (
     <div className="relative h-screen w-full flex flex-col items-center justify-center gap-5">
       <div className="relative z-10 h-1/12 w-11/12 sm:w-1/2 flex flex-col items-center justify-center bg-white rounded-lg shadow-lg p-10">
@@ -52,6 +63,7 @@ const Todo = () => {
                 id={item.id}
                 isCompleted={item.isCompleted}
                 deleteTodo={deleteTodo}
+                toggle={toggle}
               />
             );
           })}

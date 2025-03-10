@@ -17,7 +17,7 @@ const List_items = ({ text, id, isCompleted, deleteTodo, toggle }) => {
           src={isCompleted ? clicked : unclicked}
           alt="unclicked_icon"
         />
-        <p className={`text-lg Fcursor-pointer ${isCompleted ? "line-through" : ""}`}>{text}</p>
+        <p className={`text-lg cursor-pointer ${isCompleted ? "line-through" : ""}`}>{text}</p>
       </div>
       <div>
         <img

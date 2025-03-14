@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import List_items from "./List_items";
 
 const Todo = () => {
-  const [todoList, setTodoList] = useState([]);
+  const [todoList, setTodoList] = useState(localStorage.getItem("todos") ? JSON.parse(localStorage.getItem("todos")) : []);
 
   const inputRef = useRef();
 
@@ -34,7 +34,7 @@ const Todo = () => {
       });
     });
   };
-  useEffect(() => {}, [todoList]);
+  useEffect(() => {localStorage.setItem("todos", JSON.stringify(todoList))}, [todoList]);
   return (
     <div className="relative h-screen w-full flex flex-col items-center justify-center gap-5">
       <div className="relative z-10 h-1/12 w-11/12 sm:w-1/2 flex flex-col items-center justify-center bg-white rounded-lg shadow-lg p-10">

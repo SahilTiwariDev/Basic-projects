@@ -5,7 +5,6 @@ A simple number guessing game built with HTML, CSS, and JavaScript. The game pro
 
 ## Features
 - User-friendly interface
-- Responsive design
 - Real-time feedback on guesses
 - Limited number of attempts
 

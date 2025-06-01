@@ -4,7 +4,6 @@
 A simple number guessing game built with HTML, CSS, and JavaScript. The game prompts the player to guess a randomly generated number within a specified range, providing feedback on whether the guess is too high or too low. 
 
 ## Features
-- User-friendly interface
 - Real-time feedback on guesses
 - Limited number of attempts
 
@@ -21,7 +20,7 @@ A simple number guessing game built with HTML, CSS, and JavaScript. The game pro
 
 ## Installation
 1. Clone the repository: 
-`git clone https://github.com/SahilTiwariDev/Guess-The_Number`
+`git clone https://github.com/SahilTiwariDev/Guess-The-Number`
 
 2. Navigate to the project directory:
 `cd Number-Guessing-Game`
